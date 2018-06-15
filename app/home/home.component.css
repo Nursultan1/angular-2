@@ -1,0 +1,12 @@
+.container{
+    min-height: 600px;
+    width: 700px;
+}
+.item h4{
+    margin-left: 20px;
+    font-style: italic;
+}
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

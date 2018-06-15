@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading"> <h3>Регистрация</h3> </div>
+        <div class="panel-body">
+
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+        
+                    <input id="name" type="text" class="form-control"
+                        formControlName="name" required />
+        
+                    <div *ngIf="formErrors.name" class="alert alert-danger">
+                        {{ formErrors.name }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Фамилия</label>
+        
+                    <input id="last_name" type="text" class="form-control"
+                        formControlName="last_name" required />
+        
+                    <div *ngIf="formErrors.last_name" class="alert alert-danger">
+                        {{ formErrors.last_name }}
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Email</label>
+        
+                    <input id="email" type="text" class="form-control"
+                        formControlName="email" required />
+        
+                    <div *ngIf="formErrors.email" class="alert alert-danger">
+                        {{ formErrors.email }}
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="password1">Пароль</label>
+        
+                    <input type="password" id="password1" class="form-control"
+                        formControlName="password1" required />
+        
+                    <div *ngIf="formErrors.password1" class="alert alert-danger">
+                        {{ formErrors.password1 }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password2">Повторите пароль</label>
+        
+                    <input type="password" id="password2" class="form-control"
+                        formControlName="password2" required />
+        
+                    <div *ngIf="formErrors.password2" class="alert alert-danger">
+                        {{ formErrors.password2 }}
+                    </div>
+                </div>
+        
+                <button type="submit" class="btn btn-default" [disabled]="!registerForm.valid">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</div>
